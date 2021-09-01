@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+actor usuario as usu
+package Sist_Creacion_Reservas {
+  usecase "Crear reserva" as CR
+}
+package API_Reservas{
+  
+}
+package Sistema_Bioseguridad {
+  usecase "Registrar usuario" as UC1
+  usecase "Inicio de sesión" as UC2
+  usecase "Responder encuesta" as UC3
+  usecase "Comprar paquete turistico" as UC4
+}
+usu --> UC1
+usu --> UC2
+usu --> UC3
+usu --> UC4
+UC4 --> CR
+CR --> API_Reservas
+@enduml
